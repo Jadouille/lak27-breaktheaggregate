@@ -1,1 +1,288 @@
-<h1>Coming soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breaking the Aggregate: Uncovering the Hidden Consequences | LAK27 Workshop</title>
+  <meta name="description" content="A half-day LAK27 workshop on practical techniques for interrogating educational data and assessing algorithmic fairness in learning analytics.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <p class="venue">LAK27 Half-Day Workshop</p>
+  <h1>Breaking the Aggregate</h1>
+  <p class="subtitle">Uncovering the hidden consequences</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#goals">Goals</a></li>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#program">Program</a></li>
+    <li><a href="#organizers">Organizers</a></li>
+    <li><a href="#participate">Call for Participation</a></li>
+    <li><a href="#materials">Materials</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>
+      Learning analytics increasingly relies on complex data and models to understand and support learners.
+      However, decisions about how data are collected, represented, analyzed, and modeled can introduce or
+      obscure potential sources of bias. This half-day workshop will provide participants with practical
+      techniques for interrogating educational data and assessing algorithmic fairness.
+    </p>
+    <p>
+      Through guided exploration of educational datasets and model outputs, participants will examine data
+      distributions and representation, explore how analytical choices shape interpretations, disaggregate
+      model performance across learner groups, and compare approaches to evaluating fairness. The workshop
+      will combine short conceptual introductions with individual and small-group activities and facilitated
+      discussion. Participants will consider how questions of bias and fairness arise throughout the learning
+      analytics pipeline and leave with practical approaches they can apply to their own practice.
+    </p>
+    <div class="facts">
+      <div class="fact"><strong>Format</strong>Guided exploration workshop</div>
+      <div class="fact"><strong>Length</strong>Half day</div>
+      <div class="fact"><strong>Participants</strong>10&ndash;20 expected</div>
+      <div class="fact"><strong>Language</strong>English</div>
+    </div>
+    <p class="keywords"><strong>Keywords:</strong> Educational data, algorithmic fairness, fairness evaluation</p>
+  </section>
+
+  <section id="goals">
+    <h2>Goals and Intended Outcomes</h2>
+    <p>
+      This workshop aims to provide participants with practical approaches for interrogating the complexity
+      and fairness of data used in learning analytics. Through a series of hands-on activities, participants
+      will move from exploring and understanding educational data to examining how analytical and modeling
+      choices can shape conclusions about learners. The workshop will encourage participants to consider
+      fairness throughout the analytic process and develop techniques they can apply within their own
+      research and practice. Specifically, the primary goals of this workshop are:
+    </p>
+    <ol class="goals">
+      <li>
+        <strong>A multi-disciplinary roadmap to fairness in research in learning analytics.</strong>
+        Provide the tools to conduct fairness analysis to a wide audience, from novices to experts. We start
+        with simple methods, such as stratified analyses, to help participants disambiguate the different
+        signals present in their data. We then continue with more advanced methods that address current
+        challenges in fairness research, such as small-N problems, which can arise when analyzing
+        intersectional groups or working with very sensitive data in local institutions.
+      </li>
+      <li>
+        <strong>A place to re-assess previous research and current datasets.</strong>
+        Provide participants with a recent and relevant educational dataset to uncover the stories usually
+        hidden by traditional learning analytics practices, and collectively decide how these analyses should
+        best be integrated into current research pipelines.
+      </li>
+      <li>
+        <strong>A venue to discuss the consequences of one-size-fits-all models.</strong>
+        Discuss the consequences one-size-fits-all approaches can have for specific demographic groups when
+        deployed in diverse institutions worldwide. Understand who benefits, who gets
+        disadvantaged, and to what extent, by analyzing recent work conducted in the LAK community.
+      </li>
+      <li>
+        <strong>Developing a common vision.</strong>
+        A co-constructed set of community guidelines to help the LAK community strengthen fairness
+        considerations in learning analytics research and practice.
+      </li>
+    </ol>
+  </section>
+
+  <section id="background">
+    <h2>Background</h2>
+    <p>
+      The data that informs learning analytics is continually expanding, as are the processes we use to mine
+      and understand it. These data can include assessment outcomes, demographic information, self-report
+      measures, interaction logs, and increasingly complex behavioral and multimodal traces. Although these
+      sources create opportunities to represent learning processes at greater depth, they also introduce
+      analytical challenges. Educational data does not neutrally represent learners. Decisions about which
+      constructs to measure, how to operationalize them, when and from whom to collect data, and at what level
+      to aggregate data shape the conclusions that can be drawn.
+    </p>
+    <p>
+      These challenges matter because similar patterns in observed data may reflect substantially different
+      underlying learning processes. For example, similar behavioral traces may reflect
+      different cognitive or motivational conditions, meaning interventions based on those traces may have
+      differing effects. Conversely, aggregated measures may obscure meaningful within-learner variation over
+      time. Learning analytics must therefore consider measurement choices, granularity, and the relationship
+      between observable behavior and the constructs researchers seek to understand.
+    </p>
+    <p>
+      These complexities have direct implications for algorithmic fairness. Bias in educational algorithms can
+      emerge at multiple points in the analytic pipeline, including through decisions about measurement and
+      data collection as well as model development and deployment. Within learning analytics, this has motivated growing attention to the relationship between
+      algorithmic fairness, the absence of bias, and broader questions of educational equity. Importantly, fairness cannot necessarily be established through a single technical
+      criterion. The interpretation of fairness metrics depends on the underlying data-generating process,
+      intended application, and assumptions about what constitutes fair treatment, while an analytic system&rsquo;s
+      consequences depend on the broader sociotechnical context in which it is deployed.
+    </p>
+    <p>
+      Despite growing attention to fairness and responsible AI, researchers and practitioners often face a gap
+      between recognizing these concerns conceptually and having practical methods for investigating them in
+      their own work. Questions such as these can be investigated using accessible exploratory, visualization,
+      disaggregation, and model-evaluation techniques:
+    </p>
+    <ul>
+      <li>Who is represented in this dataset?</li>
+      <li>What patterns are obscured by aggregation?</li>
+      <li>How does model performance vary across groups?</li>
+      <li>What are the consequences of different kinds of errors?</li>
+    </ul>
+    <p>
+      This workshop addresses this gap through a hands-on exploration of educational data and algorithmic
+      fairness. Rather than treating fairness as a single metric or algorithmic bias as solely a property of a
+      trained model, participants will work through the analytical pipeline, from understanding and
+      visualizing data through disaggregating model performance and examining the consequences of modeling
+      decisions. In doing so, the workshop aims to develop participants&rsquo; practical capacity to critically
+      interrogate the data and algorithms that increasingly underpin learning analytics research and practice.
+    </p>
+  </section>
+
+  <section id="program">
+    <h2>Program</h2>
+    <p>
+      This half-day session is structured as a <strong>Guided Exploration Workshop</strong>, emphasizing active,
+      hands-on participation rather than presentations. Short facilitator-led introductions provide the
+      conceptual and technical grounding for each activity, followed by hands-on analysis, small-group
+      interpretation, and whole-group discussion. Activities follow a progressive structure, with each stage
+      introducing additional complexity into participants&rsquo; analysis.
+    </p>
+    <table class="schedule">
+      <thead>
+        <tr><th>Duration</th><th>Session</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>~20 min</td>
+          <td>
+            <strong>Introduction</strong><br>
+            Learning objectives and schedule of the workshop. The organizers introduce themselves and ask
+            participants about their personal objectives for the workshop.
+          </td>
+        </tr>
+        <tr>
+          <td>~50 min</td>
+          <td>
+            <strong>Plenary + collective discussions</strong><br>
+            An accessible introduction to fairness methods in learning analytics for a mixed audience, touching
+            on disaggregated performance, how different error metrics can emphasize different analytical and
+            societal flaws, and how to address low-data contexts in intersectional analyses. Researchers new to
+            these techniques will get a grasp of what is being done in the field, and experts can debate which
+            techniques are most relevant to their own research.
+          </td>
+        </tr>
+        <tr>
+          <td>~50 min</td>
+          <td>
+            <strong>Hands-on exercise &amp; group work</strong><br>
+            Using their own dataset or the provided recent educational dataset, participants compare the
+            different stories they can extract from their data based on aggregation style, choice of error
+            metric, model calibration, and statistical analyses.
+          </td>
+        </tr>
+        <tr class="break">
+          <td>&mdash;</td>
+          <td>Break</td>
+        </tr>
+        <tr>
+          <td>~50 min</td>
+          <td>
+            <strong>From model errors to real-world consequences</strong><br>
+            Case discussions on the real-world consequences of biased analyses, drawing on both the hands-on
+            exercise and current research being conducted at LAK. Guiding questions:
+            <ul>
+              <li>Who experiences the false positives, and who experiences the false negatives? Do both bring similar positive/negative consequences?</li>
+              <li>How do consequences vary by institution, context, and intervention type?</li>
+              <li>What happens when a prediction becomes an action?</li>
+              <li>How do feedback loops form?</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>~30 min</td>
+          <td>
+            <strong>A fairness manifesto for the LAK community</strong><br>
+            Participants collaboratively draft a set of guiding principles and recommendations for the LAK
+            community, centered on the importance of systematically integrating fairness practices into
+            learning analytics research.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="organizers">
+    <h2>Organizers</h2>
+    <div class="organizers">
+      <div class="organizer">
+        <h3>Frank Stinar</h3>
+        <p>University of Illinois Urbana&ndash;Champaign</p>
+        <p><a href="mailto:fstinar2@illinois.edu">fstinar2@illinois.edu</a></p>
+      </div>
+      <div class="organizer">
+        <h3>Jade Mai Cock</h3>
+        <p>Sorbonne University</p>
+        <p><a href="mailto:jade-mai.cock@lip6.fr">jade-mai.cock@lip6.fr</a></p>
+      </div>
+      <div class="organizer">
+        <h3>Stephen Hutt</h3>
+        <p>University of Minnesota</p>
+        <p><a href="mailto:shutt@umn.edu">shutt@umn.edu</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="participate">
+    <h2>Call for Participation</h2>
+    <p>
+      We welcome researchers, practitioners, and students interested in bias and fairness in learning
+      analytics, from those new to fairness analysis to experienced researchers. No prior experience with
+      fairness methods is required: the workshop starts with simple methods and builds toward more advanced
+      techniques.
+    </p>
+    <ul>
+      <li>We anticipate <strong>10&ndash;20 participants</strong>.</li>
+      <li>The workshop will be conducted in <strong>English</strong>.</li>
+      <li>
+        Participants are encouraged to <strong>bring their own dataset</strong> to analyze during the
+        hands-on session. A recent and relevant educational dataset will also be provided for those who do
+        not bring one.
+      </li>
+    </ul>
+    <div class="callout">
+      To express interest or ask questions, please contact the organizers by email
+      (<a href="mailto:fstinar2@illinois.edu">fstinar2@illinois.edu</a>). Registration details will follow the
+      LAK27 conference registration process.
+    </div>
+  </section>
+
+  <section id="materials">
+    <h2>Preparation and Supplemental Materials</h2>
+    <p>
+      The draft of principles produced during the workshop, the dataset used in the hands-on activities, and
+      the slides shown will be shared through an Open Science repository and posted on this website.
+    </p>
+    <ul>
+      <li>Workshop dataset &mdash; <em>link coming soon</em></li>
+      <li>Workshop slides &mdash; <em>link coming soon</em></li>
+      <li>Fairness manifesto draft &mdash; <em>available after the workshop</em></li>
+    </ul>
+    <p>
+      If you plan to bring your own dataset, consider ahead of time which learner groups and outcomes you would
+      like to examine, and what kinds of errors would matter most in your context.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  Breaking the Aggregate: Uncovering the Hidden Consequences &middot; LAK27 Workshop
+</footer>
+
+</body>
+</html>
